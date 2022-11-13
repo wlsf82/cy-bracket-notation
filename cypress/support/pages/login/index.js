@@ -7,3 +7,10 @@ Cypress.Commands.add('loginPage.fillFormAndSubmit', (
   cy.get('[data-test="password"]').type(password, { log: false })
   cy.get('[data-test="login-button"]').click()
 })
+
+Cypress.Commands.add('loginPage.getError', () => {
+  cy.get('[data-test="error"]')
+    .then($error => {
+      return $error[0].innerText
+    })
+})

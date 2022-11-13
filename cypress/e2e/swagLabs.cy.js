@@ -21,4 +21,13 @@ describe('SWAG Labs', () => {
       cy['checkoutCompletePage.confirmCompletion']()
     })
   })
+
+  context('Login', () => {
+    it('unsuccessfully logs in', () => {
+      cy['loginPage.fillFormAndSubmit']('standard_user', 'invalid-password')
+
+      cy['loginPage.getError']()
+        .should('contain', 'Username and password do not match any user in this service')
+    })
+  })
 })
