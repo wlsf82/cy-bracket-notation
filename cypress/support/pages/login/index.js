@@ -1,4 +1,4 @@
-Cypress.Commands.add('loginPage.fillFormAndSubmit', (
+Cypress.Commands.add('loginPage_fillFormAndSubmit', (
   user = 'standard_user',
   password = 'secret_sauce',
 ) => {

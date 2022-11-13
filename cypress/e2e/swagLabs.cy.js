@@ -1,7 +1,7 @@
 describe('SWAG Labs', () => {
   context('Checkout', () => {
     beforeEach(() => {
-      cy['loginPage.fillFormAndSubmit']()
+      cy['loginPage_fillFormAndSubmit']()
     })
 
     it('successfully goes through the whole checkout process', () => {
@@ -24,7 +24,7 @@ describe('SWAG Labs', () => {
 
   context('Login', () => {
     it('unsuccessfully logs in', () => {
-      cy['loginPage.fillFormAndSubmit']('standard_user', 'invalid-password')
+      cy.loginPage_fillFormAndSubmit('standard_user', 'invalid-password')
 
       cy['loginPage.getError']()
         .should('contain', 'Username and password do not match any user in this service')
