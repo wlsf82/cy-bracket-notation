@@ -1,0 +1,22 @@
+{
+  "name": "cy-bracket-notation",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate how to call Cypress and custom commands using the JS bracket notion, instead of the dot notation.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "Cypress.io",
+    "Testing",
+    "JavaScript",
+    "Bracket Notation",
+    "Talking About Testing"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^11.0.1"
+  }
+}
